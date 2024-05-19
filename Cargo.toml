@@ -1,0 +1,25 @@
+[package]
+name = "intermezzos"
+version = "0.1.0"
+authors = ["steveklabnik <steve@steveklabnik.com>"]
+
+[package.metadata.bootimage]
+default-target = "intermezzos.json"
+
+[workspace]
+
+[dependencies]
+bootloader = "0.6.4"
+
+[dependencies.vga]
+path = "vga"
+
+[[bin]]
+name = "intermezzos"
+test = false
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
